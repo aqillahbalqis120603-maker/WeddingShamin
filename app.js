@@ -265,56 +265,56 @@ function frameSVG(key) {
   let body = "";
 
   if (key === "emas") {
-    const oval = "M170 610a370 500 0 1 0 740 0a370 500 0 1 0 -740 0Z";
+    const oval = "M110 575a430 545 0 1 0 860 0a430 545 0 1 0 -860 0Z";
     let beads = "";
     const N = 60;
     for (let i = 0; i < N; i++) {
       const a = (i / N) * Math.PI * 2;
-      beads += `<circle cx="${(540 + 408 * Math.cos(a)).toFixed(1)}" cy="${(610 + 538 * Math.sin(a)).toFixed(1)}" r="7" fill="url(#gGold)"/>`;
+      beads += `<circle cx="${(540 + 465 * Math.cos(a)).toFixed(1)}" cy="${(575 + 580 * Math.sin(a)).toFixed(1)}" r="7" fill="url(#gGold)"/>`;
     }
     body = `
       <path fill-rule="evenodd" fill="url(#gBg)" d="M0 0H1080V1440H0Z ${oval}"/>
-      <ellipse cx="540" cy="610" rx="372" ry="502" fill="none" stroke="url(#gGold)" stroke-width="30"/>
-      <ellipse cx="540" cy="610" rx="352" ry="482" fill="none" stroke="#8f6a2c" stroke-width="3"/>
-      <ellipse cx="540" cy="610" rx="392" ry="522" fill="none" stroke="url(#gGold)" stroke-width="4"/>
+      <ellipse cx="540" cy="575" rx="432" ry="547" fill="none" stroke="url(#gGold)" stroke-width="26"/>
+      <ellipse cx="540" cy="575" rx="414" ry="529" fill="none" stroke="#8f6a2c" stroke-width="3"/>
+      <ellipse cx="540" cy="575" rx="450" ry="565" fill="none" stroke="url(#gGold)" stroke-width="4"/>
       ${beads}
-      ${placeBunch(915, 200, 1.45, 10)}
-      ${placeBunch(165, 1010, 1.45, 190)}
-      ${placeBunch(150, 215, 0.7, -30)}
-      ${placeBunch(940, 1050, 0.7, 150)}
+      ${placeBunch(975, 130, 1.25, 15)}
+      ${placeBunch(105, 1020, 1.25, 195)}
+      ${placeBunch(120, 150, 0.6, -30)}
+      ${placeBunch(960, 1040, 0.6, 150)}
     `;
   }
 
   if (key === "renda") {
-    const arch = "M150 1130V540A390 390 0 0 1 930 540V1130Z";
+    const arch = "M90 1160V490A450 450 0 0 1 990 490V1160Z";
     body = `
       <path fill-rule="evenodd" fill="url(#gBg)" d="M0 0H1080V1440H0Z ${arch}"/>
-      <path d="M118 1162V540A422 422 0 0 1 962 540V1162Z" fill="none" stroke="#f4ecdc" stroke-width="14" stroke-dasharray="0 22" stroke-linecap="round"/>
-      <path d="M134 1146V540A406 406 0 0 1 946 540V1146Z" fill="none" stroke="#f4ecdc" stroke-width="6" stroke-dasharray="0 14" stroke-linecap="round" opacity=".8"/>
-      <path d="${arch}" fill="none" stroke="#f4ecdc" stroke-width="36"/>
+      <path d="M68 1180V490A472 472 0 0 1 1012 490V1180Z" fill="none" stroke="#f4ecdc" stroke-width="14" stroke-dasharray="0 22" stroke-linecap="round"/>
+      <path d="M78 1170V490A462 462 0 0 1 1002 490V1170Z" fill="none" stroke="#f4ecdc" stroke-width="6" stroke-dasharray="0 14" stroke-linecap="round" opacity=".8"/>
+      <path d="${arch}" fill="none" stroke="#f4ecdc" stroke-width="30"/>
       <path d="${arch}" fill="none" stroke="url(#gGold)" stroke-width="4"/>
-      ${placeBunch(150, 1130, 1.1, 200)}
-      ${placeBunch(940, 1130, 1.1, -20)}
-      ${placeBunch(110, 190, 0.75, -40)}
-      ${placeBunch(970, 190, 0.75, 40)}
+      ${placeBunch(110, 1160, 0.95, 200)}
+      ${placeBunch(970, 1160, 0.95, -20)}
+      ${placeBunch(80, 130, 0.65, -40)}
+      ${placeBunch(1000, 130, 0.65, 40)}
     `;
   }
 
   if (key === "polaroid") {
     body = `
-      <path fill-rule="evenodd" fill="#f7f1e6" d="M0 0H1080V1440H0Z M60 60H1020V1140H60Z"/>
+      <path fill-rule="evenodd" fill="#f7f1e6" d="M0 0H1080V1440H0Z M40 40H1040V1160H40Z"/>
       <rect x="2" y="2" width="1076" height="1436" fill="none" stroke="#e5dcc8" stroke-width="4"/>
-      <rect x="60" y="60" width="960" height="1080" fill="none" stroke="#e8dfca" stroke-width="3"/>
-      ${placeBunch(120, 1290, 0.55, 190)}
-      ${placeBunch(960, 1290, 0.55, -10)}
+      <rect x="40" y="40" width="1000" height="1120" fill="none" stroke="#e8dfca" stroke-width="3"/>
+      ${placeBunch(100, 1290, 0.55, 190)}
+      ${placeBunch(980, 1290, 0.55, -10)}
     `;
   }
 
   if (key === "asli") {
     body = `
-      <rect x="0" y="1060" width="1080" height="380" fill="url(#gShade)"/>
-      <rect x="30" y="30" width="1020" height="1380" fill="none" stroke="url(#gGold)" stroke-width="3"/>
-      <rect x="48" y="48" width="984" height="1344" fill="none" stroke="#dfba78" stroke-width="1" opacity=".6"/>
+      <rect x="0" y="1100" width="1080" height="340" fill="url(#gShade)"/>
+      <rect x="24" y="24" width="1032" height="1392" fill="none" stroke="url(#gGold)" stroke-width="3"/>
+      <rect x="38" y="38" width="1004" height="1364" fill="none" stroke="#dfba78" stroke-width="1" opacity=".6"/>
     `;
   }
 
@@ -322,8 +322,8 @@ function frameSVG(key) {
 }
 
 const FRAME_TEXT = {
-  emas:     { size: 150, nameY: 1292, dateY: 1372, gold: true },
-  renda:    { size: 150, nameY: 1305, dateY: 1385, gold: true },
+  emas:     { size: 140, nameY: 1292, dateY: 1368, gold: true },
+  renda:    { size: 140, nameY: 1302, dateY: 1378, gold: true },
   polaroid: { size: 138, nameY: 1262, dateY: 1342, nameColor: "#3d5133", dateColor: "#8e2640" },
   asli:     { size: 120, nameY: 1325, dateY: 1390, nameColor: "#fbf5eb", dateColor: "#ebd398" }
 };
@@ -516,8 +516,9 @@ async function initCamera() {
     cameraStream = await navigator.mediaDevices.getUserMedia({
       video: {
         facingMode: { ideal: currentFacing },
-        width: { ideal: 1280 },
-        height: { ideal: 1920 }
+        aspectRatio: { ideal: 0.75 },
+        width: { ideal: 1080 },
+        height: { ideal: 1440 }
       },
       audio: false
     });

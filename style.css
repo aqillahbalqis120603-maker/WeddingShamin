@@ -547,11 +547,11 @@ body::before {
 
 .camera-wrapper {
   position: relative;
-  width: min(100%, calc(60vh * 0.75));
-  width: min(100%, calc(60dvh * 0.75));
+  width: min(94vw, calc(68vh * 0.75));
+  width: min(94vw, calc(68dvh * 0.75));
   aspect-ratio: 3 / 4;
   margin: 0 auto;
-  border-radius: 18px;
+  border-radius: 20px;
   overflow: hidden;
   background: #121c11;
   border: 1.5px solid rgba(223, 186, 120, 0.55);
